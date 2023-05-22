@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listTVFragment">
+    <fragment
+        android:id="@+id/listTVFragment"
+        android:name="com.camc.tvcanal.ui.tv.ListTV.ListTVFragment"
+        android:label="ListTVFragment"
+        tools:layout="@layout/fragment_list_tv">
+        >
+        <action
+            android:id="@+id/action_listTVFragment_to_newTVFragment"
+            app:destination="@id/newTVFragment"/>
+        <action
+            android:id="@+id/action_listTVFragment_to_viewTVFragment"
+            app:destination="@id/viewTVFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newTVFragment"
+        android:name="com.camc.tvcanal.ui.tv.NewTV.NewTVFragment"
+        android:label="NewTVFragment"
+        tools:layout="@layout/fragment_new_tv"
+        />
+    <fragment
+        android:id="@+id/viewTVFragment"
+        android:name="com.camc.tvcanal.ui.tv.TVFragment"
+        android:label="viewTVFragment"
+        tools:layout="@layout/fragment_view_tv"
+        />
+</navigation>

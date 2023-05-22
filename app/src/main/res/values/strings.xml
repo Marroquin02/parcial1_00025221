@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Canales de Televisión</string>
+    <string name="text_name_testing">Nombre de prueba</string>
+    <string name="text_content_testing">Contenido de prueba</string>
+    <string name="tittle_TextView">Canales de Televisión</string>
+    <string name="Add_tv">Agregar nuevo canal de televisión</string>
+    <string name="name_channel">Nombre</string>
+    <string name="content_channel">Contenido</string>
+    <string name="create_channel">Crear canal</string>
+    <string name="text_testing">Texto de prueba</string>
 </resources>
