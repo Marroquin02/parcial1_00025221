@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.camc.tvcanal.R
@@ -15,7 +16,7 @@ import com.camc.tvcanal.ui.tv.ListTV.recyclerview.TVRecyclerViewAdapter
 import com.camc.tvcanal.ui.tv.viewmodel.TVViewModel
 
 class ListTVFragment : Fragment(){
-    private val movieViewModel: TVViewModel by activityViewModels {
+    private val canalViewModel: TVViewModel by activityViewModels {
         TVViewModel.Factory
     }
     private lateinit var adapter: TVRecyclerViewAdapter
@@ -35,11 +36,14 @@ class ListTVFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
         setRecyclerView(view)
-
+        binding.btnLinkNewCanal.setOnClickListener{
+            canalViewModel.clearData()
+            it.findNavController().navigate(R.id.action_listTVFragment_to_newTVFragment)
+        }
 
     }
-    private fun showSelectedItem(movie: TVModel){
-        movieViewModel.setSelectedCanal(movie)
+    private fun showSelectedItem(canal: TVModel){
+        canalViewModel.setSelectedCanal(canal)
         findNavController().navigate(R.id.action_listTVFragment_to_viewTVFragment)
     }
 
@@ -51,11 +55,11 @@ class ListTVFragment : Fragment(){
         }
 
         binding.recycleView.adapter = adapter
-        displayMovies()
+        displayTV()
     }
 
-    private fun displayMovies(){
-        adapter.setData(movieViewModel.getCanal())
+    private fun displayTV(){
+        adapter.setData(canalViewModel.getCanal())
         adapter.notifyDataSetChanged()
     }
 

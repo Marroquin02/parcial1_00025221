@@ -25,7 +25,7 @@
         />
     <fragment
         android:id="@+id/viewTVFragment"
-        android:name="com.camc.tvcanal.ui.tv.viewTV.viewTVFragment"
+        android:name="com.camc.tvcanal.ui.tv.TVFragment"
         android:label="viewTVFragment"
         tools:layout="@layout/fragment_view_tv"
         />
