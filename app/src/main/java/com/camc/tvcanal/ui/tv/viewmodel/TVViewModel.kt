@@ -16,7 +16,7 @@ class TVViewModel(private val repository: TVRepository): ViewModel() {
     fun getCanal() = repository.getCanal()
 
     fun addCanal(canal: TVModel) = repository.addCanal(canal)
-    fun createMovie(){
+    fun createCanal(){
         if(!validateData()) {
             status.value = WRONG_INFORMATION
             return

@@ -9,7 +9,7 @@ import com.camc.tvcanal.databinding.TvitemBinding
 class TVRecyclerViewAdapter (
     private val clickListener: (TVModel) -> Unit
 ) : RecyclerView.Adapter<TVRecyclerViewHolder>() {
-    private val movies = ArrayList<TVModel>()
+    private val canals = ArrayList<TVModel>()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TVRecyclerViewHolder {
@@ -18,16 +18,17 @@ class TVRecyclerViewAdapter (
     }
 
     override fun getItemCount(): Int {
-        return movies.size
+        return canals.size
     }
 
     override fun onBindViewHolder(holder: TVRecyclerViewHolder, position: Int) {
-        val movie = movies[position]
-        holder.bind(movie, clickListener)
+        val canal = canals[position]
+        holder.bind(canal, clickListener)
     }
 
-    fun setData(movieslist: List<TVModel>){
-        movies.clear()
-        movies.addAll(movieslist)
+    
+    fun setData(canallist: List<TVModel>){
+        canals.clear()
+        canals.addAll(canallist)
     }
 }

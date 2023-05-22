@@ -42,7 +42,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/text_name_testing"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/text_movie_title" />
+                        android:textSize="@dimen/text_canal_title" />
 
                     <TextView
                         android:id="@+id/contenido_text_view"
@@ -51,7 +51,7 @@
                         android:background="@color/cardLayout"
                         android:text="@string/text_content_testing"
                         android:textColor="@color/calification"
-                        android:textSize="@dimen/text_movie_title"
+                        android:textSize="@dimen/text_canal_title"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>

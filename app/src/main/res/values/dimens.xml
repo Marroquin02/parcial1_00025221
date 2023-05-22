@@ -4,7 +4,7 @@
     <dimen name="extra_gap">32dp</dimen>
     <dimen name="xlarge_gap">64dp</dimen>
     <dimen name="large_gap">48dp</dimen>
-    <dimen name="text_movie_title">24dp</dimen>
+    <dimen name="text_canal_title">24dp</dimen>
     <dimen name="gap">8dp</dimen>
     <dimen name="height_image">200dp</dimen>
     <dimen name="width_image">300dp</dimen>
