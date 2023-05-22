@@ -18,5 +18,5 @@ var canal = mutableListOf(
     TVModel(
         "Deporte 24/7",
         "Deportivo",
-    )
+    ),
 )
